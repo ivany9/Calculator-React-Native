@@ -11,7 +11,7 @@ return (
 
      <StatusBar
                 barStyle={'light-content'}
-                backgroundColor={'red'}
+                backgroundColor={'black'}
               />      
            <CalculatorScreen/>
   </View>

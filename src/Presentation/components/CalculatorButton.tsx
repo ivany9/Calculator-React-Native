@@ -7,6 +7,7 @@ label:String;
 color?:String;
 doublesize?:boolean;
 blackText?:boolean;
+onPress: ()=>void;
 
 
 
@@ -21,12 +22,15 @@ blackText?:boolean;
     color=colors.darkGray,
     doublesize=false,
     blackText=false,
+    onPress,
   
-
   }:Props) => {
     return (
      
-                <Pressable style={({pressed})=>({
+                <Pressable
+                  onPress={()=>onPress()}
+                
+                style={({pressed})=>({
                   ...styles.button,
                    backgroundColor:color,
                    opacity:(pressed)? 0.8:1,
